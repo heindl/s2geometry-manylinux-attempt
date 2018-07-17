@@ -1,0 +1,6 @@
+[submodule "s2geometry"]
+	path = s2geometry
+	url = https://github.com/google/s2geometry.git
+[submodule "multibuild"]
+	path = multibuild
+	url = https://github.com/matthew-brett/multibuild.git
