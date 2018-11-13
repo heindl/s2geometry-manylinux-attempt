@@ -1,6 +1,7 @@
 .idea/
 /s2geometry/
 multibuild/
+pogeo-toolchain/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

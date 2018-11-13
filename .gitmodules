@@ -4,3 +4,6 @@
 [submodule "multibuild"]
 	path = multibuild
 	url = https://github.com/matthew-brett/multibuild.git
+[submodule "gcc-docker/pogeo-toolchain"]
+	path = gcc-docker/pogeo-toolchain
+	url = https://github.com/Noctem/pogeo-toolchain.git

@@ -16,6 +16,11 @@ sudo: required
 dist: trusty
 services: docker
 
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+
 matrix:
   exclude:
       # Exclude the default Python 3.5 build
@@ -24,70 +29,70 @@ matrix:
     - os: linux
       env:
         - MB_PYTHON_VERSION=2.7
-#    - os: linux
-#      env:
-#        - MB_PYTHON_VERSION=2.7
-#        - UNICODE_WIDTH=16
-#    - os: linux
-#      env:
-#        - MB_PYTHON_VERSION=2.7
-#        - PLAT=i686
-#    - os: linux
-#      env:
-#        - MB_PYTHON_VERSION=2.7
-#        - PLAT=i686
-#        - UNICODE_WIDTH=16
-#    - os: linux
-#      env:
-#        - MB_PYTHON_VERSION=3.4
-#        - NP_TEST_DEP=numpy==1.11.3
-#    - os: linux
-#      env:
-#        - MB_PYTHON_VERSION=3.4
-#        - NP_TEST_DEP=numpy==1.11.3
-#        - PLAT=i686
-#    - os: linux
-#      env:
-#        - MB_PYTHON_VERSION=3.5
-#        - NP_BUILD_DEP=numpy==1.12.0
-#        - NP_TEST_DEP=numpy==1.12.0
-#    - os: linux
-#      env:
-#        - MB_PYTHON_VERSION=3.5
-#        - PLAT=i686
-#        - NP_BUILD_DEP=numpy==1.11.3
-#        - NP_TEST_DEP=numpy==1.11.3
-#    - os: linux
-#      env:
-#        - MB_PYTHON_VERSION=3.6
-#        - NP_BUILD_DEP=numpy==1.11.3
-#        - NP_TEST_DEP=numpy==1.11.3
-#    - os: linux
-#      env:
-#        - MB_PYTHON_VERSION=3.6
-#        - PLAT=i686
-#        - NP_BUILD_DEP=numpy==1.12.0
-#        - NP_TEST_DEP=numpy==1.12.0
-#    - os: osx
-#      language: generic
-#      env: MB_PYTHON_VERSION=2.7
-#    - os: osx
-#      language: generic
-#      env:
-#        - MB_PYTHON_VERSION=3.4
-#        - NP_TEST_DEP=numpy==1.11.3
-#    - os: osx
-#      language: generic
-#      env:
-#        - MB_PYTHON_VERSION=3.5
-#        - NP_BUILD_DEP=numpy==1.11.3
-#        - NP_TEST_DEP=numpy==1.11.3
-#    - os: osx
-#      language: generic
-#      env:
-#        - MB_PYTHON_VERSION=3.6
-#        - NP_BUILD_DEP=numpy==1.12.0
-#        - NP_TEST_DEP=numpy==1.12.0
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=2.7
+        - UNICODE_WIDTH=16
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=2.7
+        - PLAT=i686
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=2.7
+        - PLAT=i686
+        - UNICODE_WIDTH=16
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=3.4
+        - NP_TEST_DEP=numpy==1.11.3
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=3.4
+        - NP_TEST_DEP=numpy==1.11.3
+        - PLAT=i686
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=3.5
+        - NP_BUILD_DEP=numpy==1.12.0
+        - NP_TEST_DEP=numpy==1.12.0
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=3.5
+        - PLAT=i686
+        - NP_BUILD_DEP=numpy==1.11.3
+        - NP_TEST_DEP=numpy==1.11.3
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=3.6
+        - NP_BUILD_DEP=numpy==1.11.3
+        - NP_TEST_DEP=numpy==1.11.3
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=3.6
+        - PLAT=i686
+        - NP_BUILD_DEP=numpy==1.12.0
+        - NP_TEST_DEP=numpy==1.12.0
+    - os: osx
+      language: generic
+      env: MB_PYTHON_VERSION=2.7
+    - os: osx
+      language: generic
+      env:
+        - MB_PYTHON_VERSION=3.4
+        - NP_TEST_DEP=numpy==1.11.3
+    - os: osx
+      language: generic
+      env:
+        - MB_PYTHON_VERSION=3.5
+        - NP_BUILD_DEP=numpy==1.11.3
+        - NP_TEST_DEP=numpy==1.11.3
+    - os: osx
+      language: generic
+      env:
+        - MB_PYTHON_VERSION=3.6
+        - NP_BUILD_DEP=numpy==1.12.0
+        - NP_TEST_DEP=numpy==1.12.0
 
 before_install:
     - BUILD_DEPENDS="$NP_BUILD_DEP Cython"
